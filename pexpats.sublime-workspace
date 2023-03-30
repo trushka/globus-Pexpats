@@ -1,0 +1,1117 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getXY"
+			],
+			[
+				"co",
+				"const"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"eg",
+				"egg"
+			],
+			[
+				"ca",
+				"camera"
+			],
+			[
+				"ve",
+				"Vector3"
+			],
+			[
+				"a",
+				"array"
+			],
+			[
+				"pr",
+				"prototype"
+			],
+			[
+				"e",
+				"egg"
+			],
+			[
+				"c",
+				"camera"
+			],
+			[
+				"fo",
+				"font-family\tproperty"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"me",
+				"meta\tTag"
+			],
+			[
+				"mi",
+				"mix-blend-mode\tproperty"
+			],
+			[
+				"tr",
+				"transparent"
+			],
+			[
+				"sce",
+				"sceneBg"
+			],
+			[
+				"ren",
+				"rendererBg"
+			],
+			[
+				"con",
+				"container"
+			],
+			[
+				"tra",
+				"translateX()\ttransform"
+			],
+			[
+				"is",
+				"isNarrow"
+			],
+			[
+				"di",
+				"display\tproperty"
+			],
+			[
+				"si",
+				"sizeI"
+			],
+			[
+				"de",
+				"deviation"
+			],
+			[
+				"br",
+				"break"
+			],
+			[
+				"rn",
+				"rnd3"
+			],
+			[
+				"po",
+				"pos"
+			],
+			[
+				"ne",
+				"near"
+			],
+			[
+				"wi",
+				"width\tproperty"
+			],
+			[
+				"fig",
+				"figure"
+			],
+			[
+				"rend",
+				"renderer"
+			],
+			[
+				"dB",
+				"dBy"
+			],
+			[
+				"ge",
+				"geometry"
+			],
+			[
+				"ro",
+				"rotateY"
+			],
+			[
+				"EL",
+				"else"
+			],
+			[
+				"fi",
+				"figSize"
+			],
+			[
+				"mai",
+				"main"
+			],
+			[
+				"q",
+				"q0"
+			],
+			[
+				"s",
+				"slerp"
+			],
+			[
+				"scr",
+				"scrSize"
+			],
+			[
+				"dis",
+				"distanceTo"
+			],
+			[
+				"scen",
+				"scene"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"colo",
+				"colors"
+			],
+			[
+				"sc",
+				"Scene"
+			],
+			[
+				"qu",
+				"quaternion"
+			],
+			[
+				"mo",
+				"mouse"
+			],
+			[
+				"dir",
+				"dir0"
+			],
+			[
+				"ray",
+				"raycaster"
+			],
+			[
+				"delt",
+				"deltaPos"
+			],
+			[
+				"pos",
+				"pos0"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"cu",
+				"cube"
+			],
+			[
+				"ini",
+				"initMain"
+			],
+			[
+				"mu",
+				"multiplyScalar"
+			],
+			[
+				"vec",
+				"vec3"
+			],
+			[
+				"set",
+				"setPos"
+			],
+			[
+				"n",
+				"new"
+			],
+			[
+				"g",
+				"Group"
+			],
+			[
+				"lo",
+				"localToWorld"
+			],
+			[
+				"fog",
+				"fogColor"
+			],
+			[
+				"dq",
+				"dq1"
+			],
+			[
+				"to",
+				"touchend"
+			],
+			[
+				"touc",
+				"touched"
+			],
+			[
+				"sh",
+				"castShadow"
+			],
+			[
+				"no",
+				"normalize"
+			],
+			[
+				"li",
+				"lightD2"
+			],
+			[
+				"bu",
+				"bumpMap"
+			],
+			[
+				"bev",
+				"bevel"
+			],
+			[
+				"mat",
+				"Math"
+			],
+			[
+				"se",
+				"setPos"
+			],
+			[
+				"pro",
+				"project"
+			],
+			[
+				"p",
+				"particles"
+			],
+			[
+				"th",
+				"THREE"
+			],
+			[
+				"Cu",
+				"CuColor"
+			],
+			[
+				"b",
+				"bCount"
+			],
+			[
+				"edit",
+				"editor"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"pre",
+				"preview"
+			],
+			[
+				"modu",
+				"modules"
+			],
+			[
+				"mou",
+				"mouseenter"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"too",
+				"tooSmallH"
+			],
+			[
+				"ch",
+				"checkActive"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"not",
+				"notSelected"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"max",
+				"maxSpace"
+			],
+			[
+				"mins",
+				"minSpace"
+			],
+			[
+				"sp",
+				"space"
+			],
+			[
+				"scale",
+				"scaleX()\ttransform"
+			],
+			[
+				"appe",
+				"appendTo"
+			],
+			[
+				"border-s",
+				"border-spacing\tproperty"
+			],
+			[
+				"bl",
+				"blob"
+			],
+			[
+				"im",
+				"img0"
+			],
+			[
+				"can",
+				"canvas"
+			],
+			[
+				"pa",
+				"parentNode"
+			],
+			[
+				"bor",
+				"border-image-width\tproperty"
+			],
+			[
+				"wa",
+				"wallTab"
+			],
+			[
+				"inter",
+				"interior"
+			],
+			[
+				"mar",
+				"margin\tproperty"
+			],
+			[
+				"bo",
+				"box0"
+			],
+			[
+				"wal",
+				"wallSizeInp"
+			],
+			[
+				"i",
+				"important"
+			],
+			[
+				"ta",
+				"target"
+			],
+			[
+				"fr",
+				"frame"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"M",
+				"Math"
+			],
+			[
+				"hi",
+				"hide"
+			],
+			[
+				"cl",
+				"closest"
+			],
+			[
+				"ap",
+				"append"
+			],
+			[
+				"canv",
+				"canv_cel"
+			],
+			[
+				"ac",
+				"active"
+			],
+			[
+				"wall",
+				"wallSizeInp"
+			],
+			[
+				"rem",
+				"removeClass"
+			],
+			[
+				"ad",
+				"addClass"
+			],
+			[
+				"inp",
+				"input"
+			],
+			[
+				"min",
+				"setMinMax"
+			],
+			[
+				"dp",
+				"dpcm0"
+			],
+			[
+				"res",
+				"resize"
+			],
+			[
+				"resiz",
+				"resizeCanvas"
+			],
+			[
+				"of",
+				"offsetWidth-"
+			],
+			[
+				"mod",
+				"modular"
+			],
+			[
+				"ma",
+				"mainContainer"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"h",
+				"h2w"
+			],
+			[
+				"L",
+				"Landscape"
+			],
+			[
+				"S",
+				"Square"
+			],
+			[
+				"t",
+				"this"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "\nconst d=220, R=160, roAtmDeg=-52, T_earth='map.png',\n\t\tobliquity=23/180*3.14, roV1=.00025, roV2=0.0005, posZ=1700,\n\t\tcanvasId='#earth', color='#0084ff', fogC='#060813';\n\nimport {Vector2,\nMath as math, \nVector3,\nQuaternion,\nWebGLRenderer,\nWebGLRenderTarget,\nScene,\nGroup,\nPerspectiveCamera,\nOrthographicCamera,\nMesh,\nRawShaderMaterial,\nTextureLoader,\nColor,\nIcosahedronGeometry,\nPoints,\nFloat32BufferAttribute,\nPointsMaterial,\nBufferGeometry,\nBufferAttribute,\nFog,\nCurvePath,\nCubicBezierCurve3,\nRaycaster } from \"./three.module.js\"\n\n\tObject.assign(Math, math);\n\tvar positions=[], particles, particle, count = 0, dpr, lastW,\n\t\tW=1, H=1, aspect=1,\n\t\troAtm=-Math.degToRad(roAtmDeg);\n\n\tvar mouseX = 0, mouseY = 0, x0, y0;\n\tvar vec2=(x,y)=>new Vector2(x,y),\n\t vec3=(x,y,z)=>new Vector3(x,y,z),\n\t quat=new Quaternion(),\n\t lookAt=vec3(), PI=Math.PI, wX=vec3(1,0,0), wY=vec3(0,1,0),\n\t canvas=document.querySelector(canvasId), container=document.querySelector('.animation'); \n\n\tvar renderer = new WebGLRenderer({alpha:true, antialias:true, canvas: canvas});//\n\tvar rTargets=[new WebGLRenderTarget(W,H,{depthBuffer:false, stencilBuffer:false})];\n\trTargets[1]=rTargets[0].clone();\n\n\tvar scene = new Scene(), scene2 = new Scene(), planet = new Group(),\n\t\tcamera = new PerspectiveCamera( 18, aspect, 1, 10000 );\n\t// \tpCamera = new OrthographicCamera( - 1, 1, 1, - 1, 0, 1 );\n\tcamera.position.z=posZ;\n\tcamera.updateMatrixWorld();\n\n\tplanet.rotateY(PI/5).rotateZ(obliquity)//.updateMatrixWorld();\n\tvar pAxis=vec3(0,1,0).applyQuaternion(planet.quaternion);\n\n\tscene2.background=rTargets[0].texture;\n\t\n\tvar bloom=new Mesh(0, new RawShaderMaterial({\n\t\tuniforms:{\n\t\t\tmap: {value: rTargets[0].texture}\n\t\t},\n\t\tvertexShader: `\n\t\t\tprecision mediump float;\n\t\t\tattribute vec3 position;\n\t\t\tattribute vec2 uv;\n\t\t\tvarying vec2 vUv;\n\t\t\tvoid main(){\n\t\t\t\tgl_Position =vec4(position, 1.);\n\t\t\t\tvUv=uv;\n\t\t\t}\n\t\t`,\n\t\tfragmentShader: `\n\t\t\tprecision mediump float;\n\t\t\tuniform sampler2D map;\n\t\t\tvarying vec2 vUv;\n\t\t\tvoid main(){\n\t\t\t\tgl_FragColor = texture2D(map, vUv);\n\t\t\t\tif (gl_FragColor.a<0.0039) discard;\n\t\t\t}\n\t\t`\n\t}))\n\tvar vVPort=window.visualViewport||{scale: 1}, rect0={};\n\tfunction resize(){\n\t\tlet rect=canvas.getBoundingClientRect();\n\t\tif (W!=rect.width || H!=rect.height || dpr!=(dpr=devicePixelRatio*vVPort.scale)) {\n\t\t\tW=rect.width; H=rect.height;\n\t\t\tlet w=W*dpr, h=H*dpr, j=0;\n\n\t\t\trenderer.setDrawingBufferSize(W, H, dpr);\n\t\t\trTargets[0].setSize(w, h);\n\t\t\trTargets[1].setSize(w, h);\n\n\t\t\tcamera.aspect=W/H;\n\t\t\tcamera.updateProjectionMatrix();\n\t\t\tlet l=camera.position.length(),\n\t\t\t\tr=vec3(0, l*Math.tan(Math.asin(R/l)), 0).project(camera).y*H;\n\t\t\tcontainer.style.opacity=1;\n\t\t\tcamera.zoom*=W/1.3/r;\n\t\t\tcamera.updateProjectionMatrix();\n\t\t}\n\t\tlet {clientWidth:w0, clientHeight:h0}=document.documentElement\n\t\tif (rect.left<0 || rect.top <0 || rect.right>w0 || rect.top>h0) {\n\t\t\t//render.setScissor\n\t\t}\n\t};\n\n\tvar Emap = (new TextureLoader()).load( T_earth, function(t){\n\t\tvar testCanvas=document.createElement('canvas'), tCtx=testCanvas.getContext('2d'), Ew, Eh;\n\t\tvar img=t.image;\n\t\tEw=testCanvas.width=img.width; Eh=testCanvas.height=img.height;\n\t\ttCtx.scale(1, -1);\n\t\ttCtx.drawImage(img,0,-Eh);\n\t\tvar idata=tCtx.getImageData(0, 0, Ew, Eh);\n\t\tEgeometry.vertices.forEach((p, i)=>{\n\t\t\tvar u=.5-Math.atan2(-p.z, -p.x)/2/PI,\n\t\t\t\tv=.5+Math.asin(p.y/R)/PI,\n\t\t\t\tcolor = idata.data[(Math.floor(u%1*Ew)+Math.floor(v*Eh)*Ew)*4];\n\t\t\tif (!color) points0.push(p);\n\t\t\t//if (!(i%1000)) console.log(i);\n\t\t})\n\t} );\n\n\tvar matScale={\n\t\tset value(val) {this.val=val*camera.zoom},\n\t\tget value() {return this.val}\n\t}\n\tvar Ematerial=new PointsMaterial({\n\t\tmap: Emap,\n\t\ttransparent: true,\n\t\talphaTest: 0.004,\n\t\tsize: R*.06,\n\t\tcolor: new Color(color).multiplyScalar(.8),\n\t\tblending: 2,\n\t\tdepthTest: false,\n\t\tonBeforeCompile: sh=>{\n\t\t\tconsole.log (sh)\n\t\t\tsh.uniforms.scale=matScale;\n\t\t\tsh.fragmentShader=sh.fragmentShader.replace('#include <map_particle_fragment>', `\n\t\t    vec2 cxy = 2.0 * gl_PointCoord - 1.0;\n\t\t    float r = length(cxy), delta = fwidth(r)*.5;\n\t\t    diffuseColor.a *= 1.-smoothstep(1. - delta, 1.+delta, r);\n\t\t\t  diffuseColor.a *= smoothstep( ${(R*.3).toFixed(1)},  ${(-R).toFixed(1)}, fogDepth-${(posZ).toFixed(1)} );\n\t\t\t`);\n\t\t\tsh.vertexShader=`\n\t\t\t\tuniform sampler2D map;\n\t\t\t\tuniform mat3 uvTransform;\n\t\t\t`+sh.vertexShader.replace('}', `\n\t\t\t\tvec2 vUv = ( uvTransform * vec3( uv, 1 ) ).xy;\n\t\t\t\tif (texture2D( map, vUv ).r >.9) fogDepth=5000.;\n\t\t\t}`)\n\n\t\t}\n\t});//, opacity: 0\n\tEmaterial.extensions = {derivatives: 1};\n\tvar Egeometry=new IcosahedronGeometry(R, 6);\n\tvar Earth = new Points(new BufferGeometry().setFromPoints(Egeometry.vertices), Ematerial);\n\tEgeometry.uv=[];\n\tEgeometry.vertices.forEach(v=>{\n\t\tEgeometry.uv.push(.5-Math.atan2(-v.z, -v.x)/2/PI);\n\t\tEgeometry.uv.push(.5+Math.asin(v.y/R)/PI)\n\t})\n\tEarth.geometry.addAttribute('uv', new Float32BufferAttribute(Egeometry.uv, 2));\n\n\tvar Pmaterial = new PointsMaterial({\n\t\tsize: d*1.2,\n\t\ttransparent: true,\n\t\talphaTest: 0.004,\n\t\tdepthTest: false,\n\t\tblending: 5,\n\t\t//opacity: .85,\n\t\tcolor: color,//.multiplyScalar(2),\n\t\tonBeforeCompile: function(sh){\n\t\t\tsh.uniforms.scale=matScale;\n\t\t\tsh.vertexShader='\\\nattribute float flash;\\n\\\nvarying float vSize;\\n\\\n'\t\t\t+sh.vertexShader.replace(/}\\s*$/, '\\\n  vSize=max(flash, 0.0);\\n\\\n  gl_PointSize*=vSize;\\n\\\n}\t\t\t');\n\t\t\tsh.fragmentShader='\\\nvarying float vSize;\\n\\\n'\t\t\t+sh.fragmentShader.replace(\"#include <map_particle_fragment>\", `\n\tvec2 cxy = 2.0 * gl_PointCoord - 1.0;\n  float r = length(cxy), delta = fwidth(r), size=1.-vSize;\n\tsize=1.-size*size;\n\t#ifdef T_POINT\n\t diffuseColor.a =1.0 - smoothstep(1. - delta, 1. + delta, r);\n\t //diffuseColor.a = (1.+delta -r)/delta;\n\t#else\n\t //float r=sqrt(r2);\n\t diffuseColor.rgb =mix(vec3(1.1), diffuse, min(r*2.3, 1.));\n\t diffuseColor.a=cos(min(r*r,1.)*PI)*.5+.5;\n\t#endif\n diffuseColor.a *= smoothstep( ${(R*.2).toFixed(1)},  ${(-R*.4).toFixed(1)}, fogDepth-${(posZ).toFixed(1)} )*size;\n      `);\n\t\t\t// console.log(sh, sh.vertexShader, sh.fragmentShader);\n\t\t}\n\t});//, opacity: 0  ///  \n\tPmaterial.extensions = {derivatives: 1};\n\n\tvar pCount=50, points = []\n\tvar flashes=new Float32Array(pCount);\n\tvar points32=new Float32Array(pCount*3);\n\tvar Pgeometry=new BufferGeometry();\n\tPgeometry.addAttribute( 'position', new BufferAttribute( points32, 3 ) );\n\tPgeometry.addAttribute( 'flash', new BufferAttribute( flashes, 1 ) );\n\n\tvar Flashes=new Points(Pgeometry, Pmaterial);\n\tplanet.add(Flashes, Earth)\n\tscene.add(planet);\n\tplanet.position.z=-R\n\n\tscene.fog=new Fog(color, posZ-R/2, posZ+R);\n\tvar t0=performance.now(), dMax=1000/15, dMin=1000/45, dT=1000/61, af, Pactive=[],\n\t\taxis=vec3(0,1,0).applyAxisAngle(vec3(0,0,1), obliquity), points0=[],\n\t\tpUp=0, pDn=[], flTimer=[], vecTest=new Vector3(), transStart, pLast, transactions=[],\n\t\tTmaterial=Pmaterial.clone();\n\tTmaterial.__proto__=Pmaterial;\n\tTmaterial.defines={T_POINT: 1};\n\tTmaterial.blending=2;\n\tTmaterial.size=.047*d; Tmaterial.opacity=.75;\n\tTmaterial.color.multiplyScalar(.8);\n\t\n\tfunction addTransaction(a,b,i){\n\t\t//console.log (pUp, a, b); //return\n\t\tvar an=a.angleTo(b), l=R*1.13+an*5.5, center=a.clone().add(b).setLength(l),\n\t\t ab=b.clone().sub(a).multiplyScalar(.25), cn=center.clone().setLength((l-R)*.7), n;//=an*160+16;\n\t\tvar curve = new CurvePath();\n\t\tcurve.add(new CubicBezierCurve3(a, a.clone().add(cn), center.clone().sub(ab), center));\n\t\tcurve.add(new CubicBezierCurve3(center, center.clone().add(ab), b.clone().add(cn), b));\n\t\tn=curve.getLength()/R*200;\n\n\t\tvar tFlashes=new Float32Array(n+1);\n\t\t//tFlashes.forEach(function(f,i){if (i) tFlashes[i]=tFlashes[i-1]+1/n});\n\t\tvar tGeometry=new BufferGeometry().setFromPoints( curve.getSpacedPoints(n) );\n\t\ttGeometry.addAttribute( 'flash', new BufferAttribute( tFlashes, 1 ) );\n\t\ttransactions[i]=new Points(tGeometry, Tmaterial);\n\t\ttransactions[i].timer=0;\n\t\ttransactions[i].n=n;\n\t\tplanet.add(transactions[i]);\n\t}\n\n\tfunction addPoint(i0, i, c=0){\n\t\tif ((c+=1)>1500) return console.log(c);\n\t\tif (i0) delete flTimer[i0];\n\t\tif (!i) {\n\t\t\tif (!points[0]) i=0\n\t\t\telse points.every(function(p, j){return points[i=j+1+'']});\n\t\t\tif (i>=pCount && (!i0 || points[i0].isNew)) return false\n\t\t}\n\t\tvar fi=Math.random()*1.8, dTest;\n\t\tvar point=points0[Math.floor(Math.random()*points0.length)].clone();\n\t\tvar dLast, pointW=Earth.localToWorld(point.clone()).applyAxisAngle(axis, roV1*150);\n\t\tif (pointW.angleTo(camera.position)+pointW.x/R>1.9 ) return addPoint(i0, i, c);\n\t\tif (i0 &&  points[i0].distanceTo(point)>R*1.84 ) return addPoint(i0, i, c);\n\t\tif (points.some((v, i)=>(v.up>-1 || flashes[i]>.05) && v.distanceTo(point)<R*(v.pInd==i0?.18:.4))) return addPoint(i0, i, c);\n\t\tpoint.pInd=i;\n\t\tpoints[i]=point;\n\t\tpoint.isNew=!i0;\n\t\tpoint.up=point.new=+!i0;\n\t\tpoints32[i*3]=point.x;\n\t\tpoints32[i*3+1]=point.y;\n\t\tpoints32[i*3+2]=point.z;\n\t\tPgeometry.attributes.position.needsUpdate=true;\n\t\tif (i0) addTransaction(points[i0], point, i)\n\t\tif (i0 && pUp<6 && Math.random()>.65) {  //fork\n\t\t\tflTimer[i0]=Math.random()<.5?Math.random()*200+230:Math.random()*100;\n\t\t\tpoints[i0].up=1\n\t\t}\n\t\treturn true\n\t}\n\n\t// interactions\n\tvar dx = 0, dy = 0, ready, pointers={},\n\t\traycaster = new Raycaster();\n\n\tcontainer.addEventListener('pointerdown', e=>{\n\t\tpointers[e.pointerId]={\n\t\t\tx0 : e.clientX,\n\t\t\ty0 : e.clientY\n\t\t}\n\t\te.preventDefault();\n\t});\n\twindow.addEventListener('pointermove', e=>{\n\t\tif (!ready || !pointers[e.pointerId]) return;\n\t\te.preventDefault();\n\t\tlet p=pointers[e.pointerId];\n\t\tdx = Math.lerp(dx, p.x0-(p.x0 = e.clientX), .3);\n\t\tdy = Math.lerp(dy, p.y0-(p.y0 = e.clientY), .3);\n\t\t//console.log(e.type, active.identifier, dx, x0)\n\t\tready = 0;\n\t\tpointers.touch=(e.pointerType=='touch');\n\t});\n\twindow.addEventListener('pointercancel', e=>delete pointers[e.pointerId]);\n\twindow.addEventListener('pointerup', e=>delete pointers[e.pointerId]);\n\twindow.addEventListener('pointerdown', e=>{delete pointers.touch;})\n\n\tvar animComplite, animA=[], animT;\n\trequestAnimationFrame(function animate() {\n\t\trequestAnimationFrame(animate);\n\t\tresize();\n\t\tvar t=performance.now(), dt=t-t0;\n\t\tif (!Emap.image) return;// || dt<dMin\n\t\tdt=Math.min(dt, dMax);\n\t\tt0=t;\n\t\tplanet.position.z-=planet.position.z*.08;\n\t\t//pAxis.applyAxisAngle(wY, roV2*dt);\n\t\tplanet.rotateOnWorldAxis(pAxis, roV1*dt);\n\n\t\tvar ax=vec3(0,1,0).applyQuaternion(planet.quaternion);\n\t\tdx*=1-.0015*dt;\n\t\tdy*=1-.0015*dt;\n\t\tif (pointers.touch) document.scrollingElement.scrollTop+=Math.round(dy*.3);\n\t\tplanet.rotateOnWorldAxis(wX, -dy*.005);\n\t\tplanet.rotateOnWorldAxis(wY, -dx*.005);\n\t\tvar aCorr=Math.sqrt(1-ax.angleTo(pAxis)/3.15);\n\t\tplanet.applyQuaternion(quat.clone().setFromUnitVectors(ax, pAxis).slerp(quat, 1-.0008*dt*aCorr));\n\n\t\tvar count=0, newTr, newP, pAdded=0, maxDn=Math.random()*.6;\n\t\tpUp=0;\n\t\tif (!points.length) addPoint();\n\t\tpoints.forEach(function(p,i){\n\t\t\tif ((flTimer[i]-=dt)<0) pAdded=1, addPoint(i+''), p.up=1\n\t\t\tcount++;\n\t\t\tif (p.up>0) {\n\t\t\t\tif ((flashes[i]+=(1.005-flashes[i])*.005*dt) > .95 ) {\n\t\t\t\t\tp.up=-1;\n\t\t\t\t}\n\t\t\t\tif (!transactions[i] && ++pUp && flashes[i]>.15) newTr=i+'';\n\t\t\t}\n\t\t\tif (p.up<0) {\n\t\t\t\tif ((flashes[i]-=(1.11-flashes[i])*flashes[i]*.006*dt) < 0.005) {\n\t\t\t\t\tdelete points[i];\n\t\t\t\t}\n\t\t\t\tif (flashes[i]<maxDn) newP=1;\n\t\t\t}\n\t\t\tif (transactions[i]) {\n\t\t\t\tvar arr=transactions[i].geometry.attributes.flash.array, n=arr.length,\n\t\t\t\t\tt=transactions[i].timer+=dt/Math.pow(transactions[i].n, .3)*.008;//, tt=t*t;\n\t\t\t\tarr.forEach(function(v,j){\n\t\t\t\t\tvar df=j/n-t, dj=n-j;\n\t\t\t\t\tarr[j]=(df<0) ? 1+df : +(df<.2)*(1-df*df*8);\n\n\t\t\t\t\tif (!(dj%6) && dj<31) arr[j]*=Math.pow(1.14, 6-dj/6)\n\t\t\t\t});\n\t\t\t\tif ( t>1 && arr[n-1]<-0.4 ) {\n\t\t\t\t\ttransactions[i].geometry.dispose();\n\t\t\t\t\tplanet.remove(transactions[i]);\n\t\t\t\t\tdelete transactions[i];\n\t\t\t\t\tif (!p.up) delete points[i]\n\t\t\t\t} else {\n\t\t\t\t\tif (t<1 || p.up>0) pUp++;\n\t\t\t\t\tif (t<1.4 && t>.8) newTr=i+'';\n\t\t\t\t\ttransactions[i].geometry.attributes.flash.needsUpdate=true\n\t\t\t\t}\n\t\t\t\tif (!p.up) flashes[i] =t>1? .3+arr[n-1]*.7:Math.smoothstep(t, .6, .95);\n\t\t\t}\n\t\t})\n\t\tif (points.length && !points[points.length-1]) points.length--;\n\t\tif (newTr) {\n\t\t\tvar p=points[newTr];\n\t\t\tif (!p.startTr && (p.new || pUp<7 && Math.random()>.4) && !pAdded++) {\n\t\t\t\tp.startTr=addPoint(newTr);\n\t\t\t\tif (p.startTr && transactions[newTr] && transactions[newTr].timer>1.2) p.up=1;\n\t\t\t}\n\t\t}\n\t\tif (newP && pUp<2 && Math.random()<.2 && !pAdded++) addPoint();\n\t\tPgeometry.attributes.flash.needsUpdate=true;\n\t\trenderer.render( scene, camera)//, rTargets[0] );\n\t\t//renderer.render( bloom, pCamera );\n\t\tready=1;\n\t});\n//})()",
+			"file": "earth.js",
+			"file_size": 12768,
+			"file_write_time": 133245614283189269,
+			"redo_stack":
+			[
+				[
+					13,
+					1,
+					"left_delete",
+					null,
+					"AgAAAJcAAAAAAAAAmAAAAAAAAAAAAAAAmAAAAAAAAACZAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlwAAAAAAAACXAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					12,
+					1,
+					"paste",
+					{
+						"event":
+						{
+							"modifier_keys":
+							{
+							},
+							"x": 568.5,
+							"y": 100.5
+						}
+					},
+					"AgAAAJkAAAAAAAAAnwAAAAAAAAAAAAAAkQAAAAAAAACRAAAAAAAAAAgAAAAxMEExREUgIA",
+					"AQAAAAAAAAABAAAAmQAAAAAAAACZAAAAAAAAAAAAAAAAAPC/"
+				]
+			],
+			"settings":
+			{
+				"buffer_size": 12395,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					5,
+					1,
+					"insert",
+					{
+						"characters": "modu"
+					},
+					"BQAAAAkCAAAAAAAACgIAAAAAAAAAAAAACgIAAAAAAAAKAgAAAAAAAAMAAABtaW4KAgAAAAAAAAsCAAAAAAAAAAAAAAsCAAAAAAAADAIAAAAAAAAAAAAADAIAAAAAAAANAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAACQIAAAAAAAAMAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					6,
+					1,
+					"insert",
+					{
+						"characters": "le"
+					},
+					"AgAAAA0CAAAAAAAADgIAAAAAAAAAAAAADgIAAAAAAAAPAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAADQIAAAAAAAANAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					9,
+					1,
+					"paste",
+					{
+						"event":
+						{
+							"modifier_keys":
+							{
+							},
+							"x": 707.5,
+							"y": 99.5
+						}
+					},
+					"AgAAAKAAAAAAAAAApwAAAAAAAAAAAAAApwAAAAAAAACnAAAAAAAAAAcAAAAjNzIyNzc5",
+					"AQAAAAAAAAABAAAAoAAAAAAAAACnAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1691,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					1,
+					1,
+					"revert",
+					null,
+					"AgAAAAAAAAAAAAAAAAAAAAAAAAA3BgAAPCFET0NUWVBFIGh0bWw+CjxodG1sPgoJPGhlYWQ+CgkJPHRpdGxlPmdsb2J1cyAtIEtZQzwvdGl0bGU+CgkJPG1ldGEgY2hhcnNldD0idXRmLTgiPgoJCTxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIHVzZXItc2NhbGFibGU9bm8sIGluaXRpYWwtc2NhbGU9MSI+CjwhLS0gCQk8c2NyaXB0IHNyYz0idGhyZWUubWluLmpzIiBkZWZlcj48L3NjcmlwdD4KIC0tPgoJCTxzdHlsZT4KYm9keSB7CgliYWNrZ3JvdW5kOiAjMDYwODEzOwoJbWFyZ2luOiAwcHg7CgloZWlnaHQ6IDIwMXZoOwp9Ci5hbmltYXRpb24gewoJLS1zaXplOiA0MDBweDsKCXBvc2l0aW9uOiBhYnNvbHV0ZTsKCXRvcDogMjV2aDsKCXJpZ2h0OiA1MHZ3OwoJZm9udC1zaXplOiBjYWxjKHZhcigtLXNpemUpLzEwMCk7Cgl3aWR0aDogdmFyKC0tc2l6ZSk7CgloZWlnaHQ6IHZhcigtLXNpemUpOwoJaXNvbGF0aW9uOiBpc29sYXRlOwoJb3BhY2l0eTowOwoJdHJhbnNpdGlvbjogb3BhY2l0eSAyLjRzOwoJcG9pbnRlci1ldmVudHM6IG5vbmU7Cn0KLmFuaW1hdGlvbiAuZWFydGggewoJcG9zaXRpb246IGFic29sdXRlOwoJdG9wOiAtMTUlOwoJbGVmdDotMTUlOwoJd2lkdGg6IDEzMCU7CgloZWlnaHQ6MTMwJTsKfQouaGFsbywgLmVkZ2UgewoJd2lkdGg6IDEwMGVtOwoJaGVpZ2h0OiAxMDBlbTsKCXBvc2l0aW9uOiBhYnNvbHV0ZTsKCWxlZnQ6IDA7Cgl0b3A6IDA7Cgl0cmFuc2Zvcm06IHJvdGF0ZSgtNTJkZWcpOwoJYm9yZGVyLXJhZGl1czogNTAlOwoJYm94LXNoYWRvdzogIzFlODVkYjUyIC0wLjhlbSAwIDUuOGVtIC0xLjVlbSBpbnNldDsKCXBvaW50ZXItZXZlbnRzOiBhbGw7Cn0KLmhhbG8gewoJZm9udC1zaXplOiAxMDYlOwoJbWFyZ2luOiAtM2VtOwoJYm94LXNoYWRvdzogIzIxNzJmZmUwIC0yLjJlbSAwIDMuMWVtIC0wLjVlbSBpbnNldCwgIzAwMTQyNmQ5IC0yLjllbSAwIDMuOGVtIC0wLjllbSBpbnNldCwgIzAwODRmZjMwIC01OWVtIDAgMThlbSAtNDFlbSBpbnNldDsKCW1peC1ibGVuZC1tb2RlOiBjb2xvci1kb2RnZTsKCWNvbG9yOiAjNTI5MWZmOWU7CglmaWx0ZXI6IGRyb3Atc2hhZG93KDAuNGVtIDAgNC42ZW0pIGJsdXIoMC4yNWVtKTsKCXRvdWNoLWFjdGlvbjogbm9uZTsKfQouaGFsbzo6YmVmb3JlLCAuaGFsbzo6YWZ0ZXJ7Cgljb250ZW50OiAnJzsKCWRpc3BsYXk6IGJsb2NrOwoJaGVpZ2h0OiAxMDAlOwoJYm9yZGVyLXJhZGl1czogNTAlOwoJYm94LXNoYWRvdzogIzMwOWJmZiAtMS4zZW0gMCAwLjllbSAtMC44ZW0gaW5zZXQ7CgltaXgtYmxlbmQtbW9kZTogY29sb3ItZG9kZ2U7Cn0KLmhhbG86OmFmdGVyewoJbWFyZ2luLXRvcDogLTEwMCU7Cn0KPC9zdHlsZT4KCTwvaGVhZD4KCTxib2R5IGlkPSJjb2xvciI+CgkJPGRpdiBjbGFzcz0iYW5pbWF0aW9uIj4KCQkJPGRpdiBjbGFzcz0iZWRnZSI+PC9kaXY+CgkJCTxjYW52YXMgaWQ9ImVhcnRoIiBjbGFzcz0iZWFydGgiPjwvY2FudmFzPgoJCQk8ZGl2IGNsYXNzPSJoYWxvIj48L2Rpdj4KCQk8L2Rpdj4KIAkJPHNjcmlwdCBzcmM9ImVhcnRoLmpzIiB0eXBlPSJtb2R1bGUiPjwvc2NyaXB0PgoJPC9ib2R5Pgo8L2h0bWw+CgAAAAAAAAAAXAYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2,
+					1,
+					"revert",
+					null,
+					"AgAAAAAAAAAAAAAAAAAAAAAAAABcBgAAPCFET0NUWVBFIGh0bWw+CjxodG1sPgoJPGhlYWQ+CgkJPHRpdGxlPmdsb2J1cyAtIEtZQzwvdGl0bGU+CgkJPG1ldGEgY2hhcnNldD0idXRmLTgiPgoJCTxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIHVzZXItc2NhbGFibGU9bm8sIGluaXRpYWwtc2NhbGU9MSI+CjwhLS0gCQk8c2NyaXB0IHNyYz0idGhyZWUubWluLmpzIiBkZWZlcj48L3NjcmlwdD4KIC0tPgoJCTxzdHlsZT4KYm9keSB7CgliYWNrZ3JvdW5kOiAjMDYwODEzOwoJbWFyZ2luOiAwcHg7CgloZWlnaHQ6IDIwMXZoOwp9Ci5hbmltYXRpb24gewoJLS1zaXplOiA0MDBweDsKCXBvc2l0aW9uOiBhYnNvbHV0ZTsKCXRvcDogMjV2aDsKCXJpZ2h0OiA1MHZ3OwoJZm9udC1zaXplOiBjYWxjKHZhcigtLXNpemUpLzEwMCk7Cgl3aWR0aDogdmFyKC0tc2l6ZSk7CgloZWlnaHQ6IHZhcigtLXNpemUpOwoJaXNvbGF0aW9uOiBpc29sYXRlOwoJb3BhY2l0eTowOwoJdHJhbnNpdGlvbjogb3BhY2l0eSAyLjRzOwoJcG9pbnRlci1ldmVudHM6IG5vbmU7Cn0KLmFuaW1hdGlvbiAuZWFydGggewoJcG9zaXRpb246IGFic29sdXRlOwoJdG9wOiAtMTUlOwoJbGVmdDotMTUlOwoJd2lkdGg6IDEzMCU7CgloZWlnaHQ6MTMwJTsKfQouaGFsbywgLmVkZ2UgewoJd2lkdGg6IDEwMGVtOwoJaGVpZ2h0OiAxMDBlbTsKCXBvc2l0aW9uOiBhYnNvbHV0ZTsKCWxlZnQ6IDA7Cgl0b3A6IDA7Cgl0cmFuc2Zvcm06IHJvdGF0ZSgtNTJkZWcpOwoJYm9yZGVyLXJhZGl1czogNTAlOwoJYm94LXNoYWRvdzogIzFlODVkYjUyIC0wLjhlbSAwIDUuOGVtIC0xLjVlbSBpbnNldDsKCXBvaW50ZXItZXZlbnRzOiBhbGw7CglmaWx0ZXI6IGdyYXlzY2FsZSgxKTsKfQouaGFsbyB7Cglmb250LXNpemU6IDEwNiU7CgltYXJnaW46IC0zZW07Cglib3gtc2hhZG93OiAjMjE3MmZmZTAgLTIuMmVtIDAgMy4xZW0gLTAuNWVtIGluc2V0LCAjMDAxNDI2ZDkgLTIuOWVtIDAgMy44ZW0gLTAuOWVtIGluc2V0LCAjMDA4NGZmMzAgLTU5ZW0gMCAxOGVtIC00MWVtIGluc2V0OwoJbWl4LWJsZW5kLW1vZGU6IGNvbG9yLWRvZGdlOwoJY29sb3I6ICM1MjkxZmY5ZTsKCWZpbHRlcjogZHJvcC1zaGFkb3coMC40ZW0gMCA0LjZlbSkgZ3JheXNjYWxlKC41KSBibHVyKDAuMjVlbSk7Cgl0b3VjaC1hY3Rpb246IG5vbmU7Cn0KLmhhbG86OmJlZm9yZSwgLmhhbG86OmFmdGVyewoJY29udGVudDogJyc7CglkaXNwbGF5OiBibG9jazsKCWhlaWdodDogMTAwJTsKCWJvcmRlci1yYWRpdXM6IDUwJTsKCWJveC1zaGFkb3c6ICMzMDliZmYgLTEuM2VtIDAgMC45ZW0gLTAuOGVtIGluc2V0OwoJbWl4LWJsZW5kLW1vZGU6IGNvbG9yLWRvZGdlOwp9Ci5oYWxvOjphZnRlcnsKCW1hcmdpbi10b3A6IC0xMDAlOwp9Cjwvc3R5bGU+Cgk8L2hlYWQ+Cgk8Ym9keSBpZD0iY29sb3IiPgoJCTxkaXYgY2xhc3M9ImFuaW1hdGlvbiI+CgkJCTxkaXYgY2xhc3M9ImVkZ2UiPjwvZGl2PgoJCQk8Y2FudmFzIGlkPSJlYXJ0aCIgY2xhc3M9ImVhcnRoIj48L2NhbnZhcz4KCQkJPGRpdiBjbGFzcz0iaGFsbyI+PC9kaXY+CgkJPC9kaXY+CiAJCTxzY3JpcHQgc3JjPSJlYXJ0aC5qcyIgdHlwZT0ibW9kdWxlIj48L3NjcmlwdD4KCTwvYm9keT4KPC9odG1sPgoAAAAAAAAAAJkGAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					5,
+					1,
+					"paste",
+					{
+						"event":
+						{
+							"modifier_keys":
+							{
+							},
+							"x": 484.5,
+							"y": 96.5
+						}
+					},
+					"AgAAADEAAAAAAAAAPwAAAAAAAAAAAAAAPwAAAAAAAAA/AAAAAAAAAAMAAABLWUM",
+					"AQAAAAAAAAABAAAAMQAAAAAAAAA0AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					2,
+					"right_delete",
+					null,
+					"AgAAADEAAAAAAAAAMQAAAAAAAAAGAAAAZ2xvYnVzMQAAAAAAAAAxAAAAAAAAAAEAAAAt",
+					"AQAAAAAAAAABAAAAMQAAAAAAAAA3AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					18,
+					1,
+					"paste",
+					null,
+					"AgAAADIAAAAAAAAAOAAAAAAAAAAAAAAAOAAAAAAAAAA4AAAAAAAAAAYAAABleHBhdHM",
+					"AQAAAAAAAAABAAAAMgAAAAAAAAA4AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					21,
+					1,
+					"insert",
+					{
+						"characters": " url"
+					},
+					"BAAAAA8BAAAAAAAAEAEAAAAAAAAAAAAAEAEAAAAAAAARAQAAAAAAAAAAAAARAQAAAAAAABIBAAAAAAAAAAAAABIBAAAAAAAAEwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAADwEAAAAAAAAPAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					22,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAABMBAAAAAAAAFQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAEwEAAAAAAAATAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					23,
+					1,
+					"insert",
+					{
+						"characters": "des"
+					},
+					"AwAAABQBAAAAAAAAFQEAAAAAAAAAAAAAFQEAAAAAAAAWAQAAAAAAAAAAAAAWAQAAAAAAABcBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFAEAAAAAAAAUAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					24,
+					1,
+					"insert",
+					{
+						"characters": "ktop"
+					},
+					"BAAAABcBAAAAAAAAGAEAAAAAAAAAAAAAGAEAAAAAAAAZAQAAAAAAAAAAAAAZAQAAAAAAABoBAAAAAAAAAAAAABoBAAAAAAAAGwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFwEAAAAAAAAXAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					25,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAABsBAAAAAAAAHAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGwEAAAAAAAAbAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					26,
+					1,
+					"insert",
+					{
+						"characters": "jpg"
+					},
+					"AwAAABwBAAAAAAAAHQEAAAAAAAAAAAAAHQEAAAAAAAAeAQAAAAAAAAAAAAAeAQAAAAAAAB8BAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHAEAAAAAAAAcAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					27,
+					1,
+					"revert",
+					null,
+					"AgAAAAAAAAAAAAAAAAAAAAAAAACuBgAAPCFET0NUWVBFIGh0bWw+CjxodG1sPgoJPGhlYWQ+CgkJPHRpdGxlPmdsb2J1cyAtIFBFWFBBVFM8L3RpdGxlPgoJCTxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4KCQk8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCB1c2VyLXNjYWxhYmxlPW5vLCBpbml0aWFsLXNjYWxlPTEiPgo8IS0tIAkJPHNjcmlwdCBzcmM9InRocmVlLm1pbi5qcyIgZGVmZXI+PC9zY3JpcHQ+CiAtLT4KCQk8c3R5bGU+CmJvZHkgewoJYmFja2dyb3VuZDogIzA2MDgxMyB1cmwoZGVza3RvcC5qcGcpOwoJbWFyZ2luOiAwcHg7CgloZWlnaHQ6IDIwMXZoOwoJcGFkZGluZy10b3A6IDIwMHB4OwoJLyogdGV4dC1hbGlnbjogY2VudGVyOyAqLwp9Ci5hbmltYXRpb24gewoJLS1zaXplOiA1MDBweDsKCXBvc2l0aW9uOiByZWxhdGl2ZTsKCWZvbnQtc2l6ZTogY2FsYyh2YXIoLS1zaXplKS8xMDApOwoJd2lkdGg6IHZhcigtLXNpemUpOwoJaGVpZ2h0OiB2YXIoLS1zaXplKTsKCWlzb2xhdGlvbjogaXNvbGF0ZTsKCW9wYWNpdHk6MDsKCXRyYW5zaXRpb246IG9wYWNpdHkgMi40czsKCXBvaW50ZXItZXZlbnRzOiBub25lOwoJbWFyZ2luOiBhdXRvOwp9Ci5hbmltYXRpb24gLmVhcnRoIHsKCXBvc2l0aW9uOiBhYnNvbHV0ZTsKCXRvcDogLTE1JTsKCWxlZnQ6LTE1JTsKCXdpZHRoOiAxMzAlOwoJaGVpZ2h0OjEzMCU7Cn0KLmhhbG8sIC5lZGdlIHsKCS0tZzogMC40OwoJd2lkdGg6IDEwMGVtOwoJaGVpZ2h0OiAxMDBlbTsKCXBvc2l0aW9uOiBhYnNvbHV0ZTsKCWxlZnQ6IDA7Cgl0b3A6IDA7Cgl0cmFuc2Zvcm06IHJvdGF0ZSgtNTJkZWcpOwoJYm9yZGVyLXJhZGl1czogNTAlOwoJYm94LXNoYWRvdzogIzFlODVkYjUyIC0wLjhlbSAwIDUuOGVtIC0xLjVlbSBpbnNldDsKCXBvaW50ZXItZXZlbnRzOiBhbGw7CglmaWx0ZXI6IGdyYXlzY2FsZSh2YXIoLS1nKSk7Cn0KLmhhbG8gewoJZm9udC1zaXplOiAxMDYlOwoJbWFyZ2luOiAtM2VtOwoJYm94LXNoYWRvdzogIzIxNzJmZmUwIC0yLjJlbSAwIDMuMWVtIC0wLjVlbSBpbnNldCwgIzAwMTQyNmQ5IC0yLjllbSAwIDMuOGVtIC0wLjllbSBpbnNldCwgIzAwODRmZjMwIC01OWVtIDAgMThlbSAtNDFlbSBpbnNldDsKCW1peC1ibGVuZC1tb2RlOiBjb2xvci1kb2RnZTsKCWNvbG9yOiAjNTI5MWZmOWU7CglmaWx0ZXI6IGRyb3Atc2hhZG93KDAuNGVtIDAgNC42ZW0pIGdyYXlzY2FsZSh2YXIoLS1nKSkgYmx1cigwLjI1ZW0pOwoJdG91Y2gtYWN0aW9uOiBub25lOwp9Ci5oYWxvOjpiZWZvcmUsIC5oYWxvOjphZnRlcnsKCWNvbnRlbnQ6ICcnOwoJZGlzcGxheTogYmxvY2s7CgloZWlnaHQ6IDEwMCU7Cglib3JkZXItcmFkaXVzOiA1MCU7Cglib3gtc2hhZG93OiAjMzA5YmZmIC0xLjNlbSAwIDAuOWVtIC0wLjhlbSBpbnNldDsKCW1peC1ibGVuZC1tb2RlOiBjb2xvci1kb2RnZTsKfQouaGFsbzo6YWZ0ZXJ7CgltYXJnaW4tdG9wOiAtMTAwJTsKfQo8L3N0eWxlPgoJPC9oZWFkPgoJPGJvZHkgaWQ9ImNvbG9yIj4KCQk8ZGl2IGNsYXNzPSJhbmltYXRpb24iPgoJCQk8ZGl2IGNsYXNzPSJlZGdlIj48L2Rpdj4KCQkJPGNhbnZhcyBpZD0iZWFydGgiIGNsYXNzPSJlYXJ0aCI+PC9jYW52YXM+CgkJCTxkaXYgY2xhc3M9ImhhbG8iPjwvZGl2PgoJCTwvZGl2PgogCQk8c2NyaXB0IHNyYz0iZWFydGguanMiIHR5cGU9Im1vZHVsZSI+PC9zY3JpcHQ+Cgk8L2JvZHk+CjwvaHRtbD4KAAAAAAAAAAC7BgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHwEAAAAAAAAfAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					30,
+					1,
+					"insert",
+					{
+						"characters": "bg.pn"
+					},
+					"BgAAABQBAAAAAAAAFQEAAAAAAAAAAAAAFQEAAAAAAAAVAQAAAAAAAAsAAABkZXNrdG9wLmpwZxUBAAAAAAAAFgEAAAAAAAAAAAAAFgEAAAAAAAAXAQAAAAAAAAAAAAAXAQAAAAAAABgBAAAAAAAAAAAAABgBAAAAAAAAGQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFAEAAAAAAAAfAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					31,
+					1,
+					"insert",
+					{
+						"characters": "g"
+					},
+					"AQAAABkBAAAAAAAAGgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGQEAAAAAAAAZAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					32,
+					1,
+					"revert",
+					null,
+					"AgAAAAAAAAAAAAAAAAAAAAAAAAC2BgAAPCFET0NUWVBFIGh0bWw+CjxodG1sPgoJPGhlYWQ+CgkJPHRpdGxlPmdsb2J1cyAtIFBFWFBBVFM8L3RpdGxlPgoJCTxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4KCQk8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCB1c2VyLXNjYWxhYmxlPW5vLCBpbml0aWFsLXNjYWxlPTEiPgo8IS0tIAkJPHNjcmlwdCBzcmM9InRocmVlLm1pbi5qcyIgZGVmZXI+PC9zY3JpcHQ+CiAtLT4KCQk8c3R5bGU+CmJvZHkgewoJYmFja2dyb3VuZDogIzA2MDgxMyB1cmwoYmcucG5nKSBjZW50ZXIgdG9wOwoJbWFyZ2luOiAwcHg7CgloZWlnaHQ6IDQwMDBweDsKCXBhZGRpbmctdG9wOiAxNTAwcHg7CgkvKiB0ZXh0LWFsaWduOiBjZW50ZXI7ICovCn0KLmFuaW1hdGlvbiB7CgktLXNpemU6IDUwMHB4OwoJcG9zaXRpb246IHJlbGF0aXZlOwoJZm9udC1zaXplOiBjYWxjKHZhcigtLXNpemUpLzEwMCk7Cgl3aWR0aDogdmFyKC0tc2l6ZSk7CgloZWlnaHQ6IHZhcigtLXNpemUpOwoJaXNvbGF0aW9uOiBpc29sYXRlOwoJb3BhY2l0eTowOwoJdHJhbnNpdGlvbjogb3BhY2l0eSAyLjRzOwoJcG9pbnRlci1ldmVudHM6IG5vbmU7CgltYXJnaW46IGF1dG87Cn0KLmFuaW1hdGlvbiAuZWFydGggewoJcG9zaXRpb246IGFic29sdXRlOwoJdG9wOiAtMTUlOwoJbGVmdDotMTUlOwoJd2lkdGg6IDEzMCU7CgloZWlnaHQ6MTMwJTsKfQouaGFsbywgLmVkZ2UgewoJLS1nOiAwLjQ7Cgl3aWR0aDogMTAwZW07CgloZWlnaHQ6IDEwMGVtOwoJcG9zaXRpb246IGFic29sdXRlOwoJbGVmdDogMDsKCXRvcDogMDsKCXRyYW5zZm9ybTogcm90YXRlKC01MmRlZyk7Cglib3JkZXItcmFkaXVzOiA1MCU7Cglib3gtc2hhZG93OiAjMWU4NWRiNTIgLTAuOGVtIDAgNS44ZW0gLTEuNWVtIGluc2V0OwoJcG9pbnRlci1ldmVudHM6IGFsbDsKCWZpbHRlcjogZ3JheXNjYWxlKHZhcigtLWcpKTsKfQouaGFsbyB7Cglmb250LXNpemU6IDEwNiU7CgltYXJnaW46IC0zZW07Cglib3gtc2hhZG93OiAjMjE3MmZmZTAgLTIuMmVtIDAgMy4xZW0gLTAuNWVtIGluc2V0LCAjMDAxNDI2ZDkgLTIuOWVtIDAgMy44ZW0gLTAuOWVtIGluc2V0LCAjMDA4NGZmMzAgLTU5ZW0gMCAxOGVtIC00MWVtIGluc2V0OwoJbWl4LWJsZW5kLW1vZGU6IGNvbG9yLWRvZGdlOwoJY29sb3I6ICM1MjkxZmY5ZTsKCWZpbHRlcjogZHJvcC1zaGFkb3coMC40ZW0gMCA0LjZlbSkgZ3JheXNjYWxlKHZhcigtLWcpKSBibHVyKDAuMjVlbSk7Cgl0b3VjaC1hY3Rpb246IG5vbmU7Cn0KLmhhbG86OmJlZm9yZSwgLmhhbG86OmFmdGVyewoJY29udGVudDogJyc7CglkaXNwbGF5OiBibG9jazsKCWhlaWdodDogMTAwJTsKCWJvcmRlci1yYWRpdXM6IDUwJTsKCWJveC1zaGFkb3c6ICMzMDliZmYgLTEuM2VtIDAgMC45ZW0gLTAuOGVtIGluc2V0OwoJbWl4LWJsZW5kLW1vZGU6IGNvbG9yLWRvZGdlOwp9Ci5oYWxvOjphZnRlcnsKCW1hcmdpbi10b3A6IC0xMDAlOwp9Cjwvc3R5bGU+Cgk8L2hlYWQ+Cgk8Ym9keSBpZD0iY29sb3IiPgoJCTxkaXYgY2xhc3M9ImFuaW1hdGlvbiI+CgkJCTxkaXYgY2xhc3M9ImVkZ2UiPjwvZGl2PgoJCQk8Y2FudmFzIGlkPSJlYXJ0aCIgY2xhc3M9ImVhcnRoIj48L2NhbnZhcz4KCQkJPGRpdiBjbGFzcz0iaGFsbyI+PC9kaXY+CgkJPC9kaXY+CiAJCTxzY3JpcHQgc3JjPSJlYXJ0aC5qcyIgdHlwZT0ibW9kdWxlIj48L3NjcmlwdD4KCTwvYm9keT4KPC9odG1sPgoAAAAAAAAAAJsGAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGgEAAAAAAAAaAQAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"open",
+				"OpenAI Edit"
+			],
+			[
+				"ope",
+				"OpenAI Edit"
+			],
+			[
+				"pref",
+				"Preferences: Package Control Settings"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Preferences: Package Control Settings"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Install Package Control"
+			],
+			[
+				"Snippet: ",
+				"Snippet: html"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 158.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/work/globus-Pexpats"
+	],
+	"file_history":
+	[
+		"/D/work/easter_egg/index.html",
+		"/D/work/easter_egg/js/main.js",
+		"/D/work/easter_egg/js/threeCustom.js",
+		"/D/work/easter_egg/js/three.module.js",
+		"/D/work/easter_egg/scene.json",
+		"/D/work/tube/js/tube.js",
+		"/D/work/three_js/build0/three.module.js",
+		"/D/work/tube/js/CSS3DRenderer.js",
+		"/D/work/tube/index.html",
+		"/D/work/three_js/src/extras/PMREMGenerator.js",
+		"/D/work/liquid-drop/MetaBalls.js",
+		"/D/work/liquid-drop/index.html",
+		"/D/work/viarback/resources/views/partials/tab2.blade.php",
+		"/D/work/viarback/resources/views/partials/canvas/generator.blade.php",
+		"/d/work/viarback/resources/views/partials/module_pics/generator.blade.php",
+		"/D/work/viarback/resources/views/canvas.blade.php",
+		"/D/work/viarback/public/js/custom.js",
+		"/D/work/modular-pictures/js/modular-generator.js",
+		"/D/work/modular-pictures/collage-constructor.html",
+		"/D/work/modular-pictures/js/PhotoEditor.js",
+		"/D/work/modular-pictures/css/PhotoEditor.css",
+		"/D/work/fotostar/interior.js",
+		"/D/work/modular-pictures/modular-pictures.html",
+		"/D/work/viarback/public/css/modular-pictures.css",
+		"/D/work/modular-pictures/js/modular-pictures.js",
+		"/D/work/viarback/public/js/modular-generator.js",
+		"/d/work/viarback/resources/views/partials/canvas/generator.blade.php",
+		"/d/work/viarback/resources/views/partials/family/generator.blade.php",
+		"/d/work/viarback/resources/views/partials/gallery_item/header.blade.php",
+		"/D/work/modular-pictures/css/modular-pictures.css",
+		"/D/work/modular-pictures/split_v.svg",
+		"/D/work/modular-pictures/js/templates.js",
+		"/D/work/modular-pictures/js/canvas.min.js",
+		"/D/work/lottery-cylinders/index.html"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 105.777777778,
+		"where_history":
+		[
+			"d:\\work\\viarback\\resources\\views\\",
+			"D:\\work\\modular-pictures\\js"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"thi",
+			"Icos",
+			"Polyhe",
+			"Polyg",
+			"Face",
+			"Geom",
+			"setsi",
+			"delta",
+			"figSise",
+			"bTrans",
+			"_m1",
+			"remove",
+			"_projScreenMatrix",
+			"_frustum",
+			"projecto",
+			"frustum",
+			"\\.\\w+\\.tab2_form",
+			"\\.\\w+\\.tab2'",
+			"\\.\\w+\\.tab2",
+			"\\.tab2",
+			"\\.\\w\\.tab2",
+			"\\.\\w\\.tab2'",
+			".tab2'",
+			".tab2",
+			"tab2",
+			"tab2.blade",
+			"tab2.blade.php",
+			"canvas.min.js",
+			"range",
+			"tooSmall",
+			"notSupport",
+			"DragAndDrop",
+			"input",
+			"--size",
+			"user-select",
+			"h2w.dpc",
+			"h2w",
+			"fullSizeM",
+			"fullSizeMin",
+			"changeSm",
+			"vInp",
+			"jcf",
+			"range",
+			"rang",
+			"accordion",
+			"accordion-title",
+			"<div\"",
+			" class=\"miracle-editor__template-item\"",
+			"url("
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"delta2",
+			"figSize",
+			"tr",
+			".tab2'",
+			"modular",
+			"modular.m",
+			"modular.min",
+			"wInp",
+			"<div",
+			"",
+			"url(https://1x-bet-ua.com"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "earth.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12395,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								145,
+								151
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1691,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								282,
+								282
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 41.7777777778
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 108.0
+	},
+	"pinned_build_system": "",
+	"project": "pexpats.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\work\\tube\\tube.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 192.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

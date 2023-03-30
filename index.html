@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>globus - KYC</title>
+		<title>globus - PEXPATS</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
 <!-- 		<script src="three.min.js" defer></script>
  -->
 		<style>
 body {
-	background: linear-gradient( 138deg, #222222 0%, #010101 25%, #080808 39%, #0b0b0b 49%, #0f0f0f 51%, #111111 60%, #040404 76%, #080808 88%, #000000 100% );
+	background: #060813 url(bg.png) center top;
 	margin: 0px;
-	height: 201vh;	
+	height: 4000px;
+	padding-top: 1410px;
 }
 .animation {
-	--size: 400px;
-	position: absolute;
-	top: 25vh;
-	right: 50vw;
+	--size: 700px;
+	position: relative;
 	font-size: calc(var(--size)/100);
 	width: var(--size);
 	height: var(--size);
@@ -24,6 +23,7 @@ body {
 	opacity:0;
 	transition: opacity 2.4s;
 	pointer-events: none;
+	margin: auto;
 }
 .animation .earth {
 	position: absolute;
@@ -33,6 +33,7 @@ body {
 	height:130%;
 }
 .halo, .edge {
+	--g: 0.45;
 	width: 100em;
 	height: 100em;
 	position: absolute;
@@ -42,6 +43,7 @@ body {
 	border-radius: 50%;
 	box-shadow: #1e85db52 -0.8em 0 5.8em -1.5em inset;
 	pointer-events: all;
+	filter: grayscale(var(--g));
 }
 .halo {
 	font-size: 106%;
@@ -49,7 +51,7 @@ body {
 	box-shadow: #2172ffe0 -2.2em 0 3.1em -0.5em inset, #001426d9 -2.9em 0 3.8em -0.9em inset, #0084ff30 -59em 0 18em -41em inset;
 	mix-blend-mode: color-dodge;
 	color: #5291ff9e;
-	filter: drop-shadow(0.4em 0 4.6em) blur(0.25em);
+	filter: drop-shadow(0.4em 0 4.6em) grayscale(var(--g)) blur(0.8px);
 	touch-action: none;
 }
 .halo::before, .halo::after{

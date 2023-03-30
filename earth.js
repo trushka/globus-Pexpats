@@ -1,7 +1,7 @@
 
 const d=220, R=160, roAtmDeg=-52, T_earth='map.png',
 		obliquity=23/180*3.14, roV1=.00025, roV2=0.0005, posZ=1700,
-		canvasId='#earth', color='#0084ff', fogC='#722779';
+		canvasId='#earth', color='#10A1DE', fogC='#060813';
 
 import {Vector2,
 Math as math, 
@@ -26,7 +26,7 @@ BufferAttribute,
 Fog,
 CurvePath,
 CubicBezierCurve3,
-Raycaster } from "./three.min.js"
+Raycaster } from "./three.module.js"
 
 	Object.assign(Math, math);
 	var positions=[], particles, particle, count = 0, dpr, lastW,
