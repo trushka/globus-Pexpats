@@ -1,12 +1,14 @@
 
 const d=220, R=160, roAtmDeg=-52, T_earth='map.png',
-		obliquity=23/180*3.14, roV1=.00025, roV2=0.0005, posZ=1700,
+		obliquity=18/180*3.14, roV1=.00025, roV2=0.0005, posZ=1700,
 		canvasId='#earth', color='#10A1DE', fogC='#060813',
-		coord0='48.13,16.95'.split(',');
+		coord0='48.13,16.95'.split(','), uShift=-.12;
 
-import {Vector2,
-MathUtils as math, 
-Vector3,
+import * as THREE from "https://cdn.skypack.dev/three@0.124";//"./three.module.js";
+
+const {Vector2,
+MathUtils: math, 
+Vector3, Euler,
 Quaternion,
 WebGLRenderer,
 WebGLRenderTarget,
@@ -18,7 +20,7 @@ Mesh,
 RawShaderMaterial,
 TextureLoader, Texture,
 Color,
-IcosahedronGeometry,
+IcosahedronGeometry, ConeGeometry,
 Points,
 Float32BufferAttribute,
 PointsMaterial,
@@ -30,7 +32,7 @@ CubicBezierCurve3,
 Raycaster,
 MeshLambertMaterial, MeshBasicMaterial,
 ShaderLib, ShaderChunk
-} from "https://cdn.skypack.dev/three@0.124" //"./three.module.js"
+} = THREE;
 
 Object.assign(Math, math);
 var positions=[], particles, particle, count = 0, dpr, lastW,
@@ -54,7 +56,7 @@ var scene = new Scene(), scene2 = new Scene(), planet = new Group(),
 camera.position.z=posZ;
 camera.updateMatrixWorld();
 
-planet.rotateY(PI/5).rotateZ(obliquity)//.updateMatrixWorld();
+planet.rotateY(PI*.27).rotateZ(obliquity)//.updateMatrixWorld();
 var pAxis=vec3(0,1,0).applyQuaternion(planet.quaternion);
 
 scene2.background=rTargets[0].texture;
@@ -124,6 +126,8 @@ var Emap = (new TextureLoader()).load( T_earth, function(t){
 	})
 } );
 
+Emap.wrapS = THREE.RepeatWrapping;
+
 var matScale={
 	set value(val) {this.val=val*camera.zoom},
 	get value() {return this.val}
@@ -149,7 +153,7 @@ var Ematerial=new PointsMaterial({
 			uniform sampler2D map;
 			uniform mat3 uvTransform;
 		`+sh.vertexShader.replace('}', `
-			vec2 vUv = ( uvTransform * vec3( uv, 1 ) ).xy;
+			vec2 vUv = ( uvTransform * vec3( uv.x+${uShift}, uv.y, 1 ) ).xy;
 			if (texture2D( map, vUv ).r >.9) fogDepth=5000.;
 		}`)
 
@@ -305,7 +309,7 @@ requestAnimationFrame(function animate() {
 	requestAnimationFrame(animate);
 	resize();
 	var t=performance.now(), dt=t-t0;
-	if (!Emap.image) return;// || dt<dMin
+	if (!Emap.image || !tTexture) return;// || dt<dMin
 	dt=Math.min(dt, dMax);
 	t0=t;
 	planet.position.z-=planet.position.z*.08;
@@ -371,12 +375,18 @@ requestAnimationFrame(function animate() {
 	}
 	if (newP && pUp<2 && Math.random()<.2 && !pAdded++) addPoint();
 	Pgeometry.attributes.flash.needsUpdate=true;
+	// point.lookAt(lookAt);
+	// tEarth.rotation.set(0,0,0);
+	// tEarth.rotateOnAxis(dir, -point.rotation.z)
+	//tTexture.rotation=;
+	//tTexture.needsUpdate=true;
 	renderer.render( scene, camera)//, rTargets[0] );
 	//renderer.render( bloom, pCamera );
 	ready=1;
 });
 
 let tTexture, tCanvas, tMaterial, tEarth;
+const targE = new Euler(), dir=vec3();
 
 document.fonts.load('bold 50px "Futura LT"').then(function(){
 	tCanvas=document.createElement('canvas');
@@ -403,7 +413,7 @@ document.fonts.load('bold 50px "Futura LT"').then(function(){
 	const {repeat}=tTexture,
 		{width, height}=tCanvas;
 
-	repeat.y=50;
+	repeat.y=40;
 	repeat.x=repeat.y*height/width;
 
 	tTexture.offset.set(1,1);//copy(repeat).multiplyScalar(.5);
@@ -422,11 +432,18 @@ document.fonts.load('bold 50px "Futura LT"').then(function(){
 		onBeforeCompile: sh=>{
 			sh.uniforms.coord={value: coord};
 			sh.fragmentShader=sh.fragmentShader.replace('}', 'if (vUv.x<0.||vUv.y<0.||vUv.x>1.||vUv.y>1.) discard;}');
-			sh.vertexShader='uniform vec2 coord;\n' + sh.vertexShader.replace('#include <uv_vertex>', 'vUv = ( uvTransform * vec3( uv.x*2.-1.-coord.x, uv.y-.5-coord.y, 1 ) ).xy;');
+			sh.vertexShader='uniform vec2 coord;\n'
+			 + sh.vertexShader.replace('#include <uv_vertex>', `vUv = ( uvTransform * vec3( uv.x*2.-1.-coord.x+${(uShift*2)}, uv.y-.5-coord.y, 1 ) ).xy;`);
 		}
 	})
 
-	tEarth=new Mesh(Egeometry, tMaterial);
-	planet.add(tEarth)
-	Object.assign(window, {Earth, Egeometry, Ematerial, tTexture, tCanvas, tMaterial, tEarth, ShaderLib, ShaderChunk, coord})
+	tEarth=new Mesh(new IcosahedronGeometry(R, 24), tMaterial);
+	Object.assign(window, {Earth, Egeometry, Ematerial, tTexture, tCanvas, tMaterial, tEarth, ShaderLib, ShaderChunk, coord, vec3})
+	targE.set(0, coord.x*PI, -coord.y*PI)
+	point.position.applyEuler(targE);
+	point.rotation.order='YXZ';
+	dir.copy(point.position).normalize();
+	planet.add(tEarth);
 })
+const point=new Mesh(new ConeGeometry(5, 10,8), new MeshBasicMaterial({color: '#fff', wireframe: true}))
+point.position.x = -R;
