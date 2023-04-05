@@ -2,7 +2,7 @@
 const d=220, R=160, roAtmDeg=-52, imgPath='', T_earth='map.png',
 		obliquity=18/180*3.14, roV1=.00025, roV2=0.0005, posZ=1700,
 		canvasId='#earth', color='#10A1DE', fogC='#060813',
-		coord0='48.13,16.95'.split(','), uShift=-.12;
+		coord='48.13,16.95'.split(','), uShift=-.15;
 
 import * as THREE from "https://cdn.skypack.dev/three@0.124";//"./three.module.js";
 
@@ -59,32 +59,10 @@ camera.updateMatrixWorld();
 planet.rotateY(PI*.25).rotateZ(obliquity)//.updateMatrixWorld();
 var pAxis=vec3(0,1,0).applyQuaternion(planet.quaternion);
 
-scene2.background=rTargets[0].texture;
+const targUV=vec2(coord[1], coord[0]).multiplyScalar(1/180);
+const targE = new Euler().set(0, targUV.x*PI-uShift*PI*2, -targUV.y*PI),
+	targPos=vec3(-R, 0, 0).applyEuler(targE), dir=vec3();
 
-// var bloom=new Mesh(0, new RawShaderMaterial({
-// 	uniforms:{
-// 		map: {value: rTargets[0].texture}
-// 	},
-// 	vertexShader: `
-// 		precision mediump float;
-// 		attribute vec3 position;
-// 		attribute vec2 uv;
-// 		varying vec2 vUv;
-// 		void main(){
-// 			gl_Position =vec4(position, 1.);
-// 			vUv=uv;
-// 		}
-// 	`,
-// 	fragmentShader: `
-// 		precision mediump float;
-// 		uniform sampler2D map;
-// 		varying vec2 vUv;
-// 		void main(){
-// 			gl_FragColor = texture2D(map, vUv);
-// 			if (gl_FragColor.a<0.0039) discard;
-// 		}
-// 	`
-// }))
 var vVPort=window.visualViewport||{scale: 1}, rect0={};
 function resize(){
 	let rect=canvas.getBoundingClientRect();
@@ -258,8 +236,9 @@ function addTransaction(a,b,i){
 	planet.add(transactions[i]);
 }
 
-function addPoint(i0, i, c=0){
+function addPoint(i0, i, c=0){ //return
 	if ((c+=1)>1500) return console.log(c);
+	if (i0 && points[i0]==targPos) return;
 	if (i0) delete flTimer[i0];
 	if (!i) {
 		if (!points[0]) i=0
@@ -268,6 +247,9 @@ function addPoint(i0, i, c=0){
 	}
 	var fi=Math.random()*1.8, dTest;
 	var point=points0[Math.floor(Math.random()*points0.length)].clone();
+
+	if (i0 &&  points[i0].distanceTo(targPos)<R*.8 ) point=targPos;
+
 	var dLast, pointW=Earth.localToWorld(point.clone()).applyAxisAngle(axis, roV1*150);
 	if (pointW.angleTo(camera.position)+pointW.x/R>1.9 ) return addPoint(i0, i, c);
 	if (i0 &&  points[i0].distanceTo(point)>R*1.84 ) return addPoint(i0, i, c);
@@ -281,10 +263,10 @@ function addPoint(i0, i, c=0){
 	points32[i*3+2]=point.z;
 	Pgeometry.attributes.position.needsUpdate=true;
 	if (i0) addTransaction(points[i0], point, i)
-	if (i0 && pUp<6 && Math.random()>.65) {  //fork
-		flTimer[i0]=Math.random()<.5?Math.random()*200+230:Math.random()*100;
-		points[i0].up=1
-	}
+	// if (i0 && pUp<6 && Math.random()>.65) {  //fork
+	// 	flTimer[i0]=Math.random()<.5?Math.random()*200+230:Math.random()*100;
+	// 	points[i0].up=1
+	// }
 	return true
 }
 
@@ -313,7 +295,6 @@ window.addEventListener('pointercancel', e=>delete pointers[e.pointerId]);
 window.addEventListener('pointerup', e=>delete pointers[e.pointerId]);
 window.addEventListener('pointerdown', e=>{delete pointers.touch;})
 
-var animComplite, animA=[], animT;
 requestAnimationFrame(function animate() {
 	requestAnimationFrame(animate);
 	resize();
@@ -395,7 +376,6 @@ requestAnimationFrame(function animate() {
 });
 
 let tTexture, tCanvas, tMaterial, tEarth;
-const targE = new Euler(), dir=vec3();
 
 document.fonts.load('bold 50px "Futura LT"').then(function(){
 	tCanvas=document.createElement('canvas');
@@ -422,8 +402,8 @@ document.fonts.load('bold 50px "Futura LT"').then(function(){
 	const {repeat}=tTexture,
 		{width, height}=tCanvas;
 
-	repeat.y=40;
-	repeat.x=repeat.y*height/width;
+	repeat.y=44;
+	repeat.x=repeat.y*height/width*.94;
 
 	tTexture.offset.set(1,1);//copy(repeat).multiplyScalar(.5);
 	//tTexture.center.set(.5,.5);
@@ -432,27 +412,22 @@ document.fonts.load('bold 50px "Futura LT"').then(function(){
 	//tTexture.matrixAutoUpdate=false;
 	tTexture.anisotropy=renderer.capabilities.getMaxAnisotropy();
 
-	const coord=vec2(coord0[1], coord0[0]).multiplyScalar(1/180);
-
 	tMaterial=new MeshBasicMaterial({
 		map: tTexture,
 		transparent: true,
 		alphaTest: .1,
 		onBeforeCompile: sh=>{
-			sh.uniforms.coord={value: coord};
+			sh.uniforms.targUV={value: targUV};
 			sh.fragmentShader=sh.fragmentShader.replace('}', 'if (vUv.x<0.||vUv.y<0.||vUv.x>1.||vUv.y>1.) discard;}');
-			sh.vertexShader='uniform vec2 coord;\n'
-			 + sh.vertexShader.replace('#include <uv_vertex>', `vUv = ( uvTransform * vec3( uv.x*2.-1.-coord.x+${(uShift*2)}, uv.y-.5-coord.y, 1 ) ).xy;`);
+			sh.vertexShader='uniform vec2 targUV;\n'
+			 + sh.vertexShader.replace('#include <uv_vertex>', `vUv = ( uvTransform * vec3( uv.x*2.-1.-targUV.x+${(uShift*2)}, uv.y-.5-targUV.y, 1 ) ).xy;`);
 		}
 	})
 
-	tEarth=new Mesh(new IcosahedronGeometry(R, 24), tMaterial);
-	Object.assign(window, {Earth, Egeometry, Ematerial, tTexture, tCanvas, tMaterial, tEarth, ShaderLib, ShaderChunk, coord, vec3})
-	targE.set(0, coord.x*PI, -coord.y*PI)
-	point.position.applyEuler(targE);
-	point.rotation.order='YXZ';
-	dir.copy(point.position).normalize();
+	tEarth=new Mesh(new IcosahedronGeometry(R*1.01, 48), tMaterial);
 	planet.add(tEarth);
+
+	Object.assign(window, {Earth, Egeometry, Ematerial, tTexture, tCanvas, tMaterial, tEarth, ShaderLib, ShaderChunk, targUV, vec3})
 })
 const point=new Mesh(new ConeGeometry(5, 10,8), new MeshBasicMaterial({color: '#fff', wireframe: true}))
 point.position.x = -R;
