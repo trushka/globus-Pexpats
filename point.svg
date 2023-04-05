@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+<style>
+  g {
+    --color: hsl(241 1% 60%);
+    fill: var(--color);
+  }
+</style>
+<polygon points="0 63  54.6 31.5  54.6 -31.5  0 -63  -54.6 -31.5  -54.6 31.5" transform="translate(64 64)" style="fill:none; stroke-width: 3; stroke: #eee"/>
+<g transform="translate(64 64)" opacity=".4">
+  <polygon points="0 63  54.6 31.5  54.6 -31.5  0 -63  -54.6 -31.5  -54.6 31.5" transform="scale(.85)" fill="#bbba"/>
+  <polygon points="0 63  54.6 31.5  54.6 -31.5  0 -63  -54.6 -31.5  -54.6 31.5" transform="scale(.62)"/>
+  <polygon points="0 63  54.6 31.5  54.6 -31.5  0 -63  -54.6 -31.5  -54.6 31.5" transform="scale(.38)" stroke-width="6" fill="#555" stroke="#fff"/>
+</g>
+</svg>

@@ -1,5 +1,5 @@
 
-const d=220, R=160, roAtmDeg=-52, T_earth='map.png',
+const d=220, R=160, roAtmDeg=-52, imgPath='', T_earth='map.png',
 		obliquity=18/180*3.14, roV1=.00025, roV2=0.0005, posZ=1700,
 		canvasId='#earth', color='#10A1DE', fogC='#060813',
 		coord0='48.13,16.95'.split(','), uShift=-.12;
@@ -56,7 +56,7 @@ var scene = new Scene(), scene2 = new Scene(), planet = new Group(),
 camera.position.z=posZ;
 camera.updateMatrixWorld();
 
-planet.rotateY(PI*.27).rotateZ(obliquity)//.updateMatrixWorld();
+planet.rotateY(PI*.25).rotateZ(obliquity)//.updateMatrixWorld();
 var pAxis=vec3(0,1,0).applyQuaternion(planet.quaternion);
 
 scene2.background=rTargets[0].texture;
@@ -110,7 +110,7 @@ function resize(){
 	}
 };
 
-var Emap = (new TextureLoader()).load( T_earth, function(t){
+var Emap = (new TextureLoader()).load( imgPath+T_earth, function(t){
 	var testCanvas=document.createElement('canvas'), tCtx=testCanvas.getContext('2d'), Ew, Eh;
 	var img=t.image;
 	Ew=testCanvas.width=img.width; Eh=testCanvas.height=img.height;
@@ -118,7 +118,7 @@ var Emap = (new TextureLoader()).load( T_earth, function(t){
 	tCtx.drawImage(img,0,-Eh);
 	var idata=tCtx.getImageData(0, 0, Ew, Eh);
 	Egeometry.vertices.forEach((p, i)=>{
-		var u=.5-Math.atan2(-p.z, -p.x)/2/PI,
+		var u=.5-Math.atan2(-p.z, -p.x)/2/PI+uShift,
 			v=.5+Math.asin(p.y/R)/PI,
 			color = idata.data[(Math.floor(u%1*Ew)+Math.floor(v*Eh)*Ew)*4];
 		if (!color) points0.push(p);
@@ -170,13 +170,14 @@ Egeometry.vertices.forEach(v=>{
 Earth.geometry.addAttribute('uv', new Float32BufferAttribute(Egeometry.uv, 2));
 
 var Pmaterial = new PointsMaterial({
-	size: d*1.2,
+	size: d*.8,
 	transparent: true,
 	alphaTest: 0.004,
 	depthTest: false,
 	blending: 5,
 	//opacity: .85,
 	color: color,//.multiplyScalar(2),
+	map: new TextureLoader().load(imgPath+'point.svg'),
 	onBeforeCompile: function(sh){
 		sh.uniforms.scale=matScale;
 		sh.vertexShader='\
@@ -189,18 +190,24 @@ var Pmaterial = new PointsMaterial({
 		sh.fragmentShader='\
 			varying float vSize;\n\
 			'			+sh.fragmentShader.replace("#include <map_particle_fragment>", `
-				vec2 cxy = 2.0 * gl_PointCoord - 1.0;
-			  float r = length(cxy), delta = fwidth(r), size=1.-vSize;
+			  float size=1.-vSize;
 				size=1.-size*size;
 				#ifdef T_POINT
+				 vec2 cxy = 2.0 * gl_PointCoord - 1.0;
+			   float r = length(cxy), delta = fwidth(r); 
 				 diffuseColor.a =1.0 - smoothstep(1. - delta, 1. + delta, r);
-				 //diffuseColor.a = (1.+delta -r)/delta;
+				 diffuseColor.a = (1.+delta -r)/delta;
 				#else
 				 //float r=sqrt(r2);
-				 diffuseColor.rgb =mix(vec3(1.1), diffuse, min(r*2.3, 1.));
-				 diffuseColor.a=cos(min(r*r,1.)*PI)*.5+.5;
+				 #include <map_particle_fragment>
+				 //diffuseColor.rgb =mix(vec3(1.1), diffuse, min(r*2.3, 1.));
+				 //diffuseColor.a=cos(min(r*r,1.)*PI)*.5+.5;
+				 diffuseColor.a *= 3.;
 				#endif
 			 diffuseColor.a *= smoothstep( ${(R*.2).toFixed(1)},  ${(-R*.4).toFixed(1)}, fogDepth-${(posZ).toFixed(1)} )*size;
+			 #ifndef T_POINT
+			  diffuseColor.a *= diffuseColor.a-.15;
+			 #endif
      `);
 			// console.log(sh, sh.vertexShader, sh.fragmentShader);
 	}
@@ -229,6 +236,8 @@ Tmaterial.defines={T_POINT: 1};
 Tmaterial.blending=2;
 Tmaterial.size=.047*d; Tmaterial.opacity=.75;
 Tmaterial.color.multiplyScalar(.8);
+
+Pmaterial.color.multiplyScalar(2)
 
 function addTransaction(a,b,i){
 	//console.log (pUp, a, b); //return
