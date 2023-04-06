@@ -248,12 +248,14 @@ function addPoint(i0, i, c=0){ //return
 	var fi=Math.random()*1.8, dTest;
 	var point=points0[Math.floor(Math.random()*points0.length)].clone();
 
-	if (i0 &&  points[i0].distanceTo(targPos)<R*.8 ) point=targPos;
+	var dis2targ=points[i0]?.distanceTo(targPos);
+	var isTarg = i0 && dis2targ<R*1.5 && dis2targ>R*.25 && Math.random()*dis2targ<R*.4;
+	if (isTarg) point=targPos;
 
 	var dLast, pointW=Earth.localToWorld(point.clone()).applyAxisAngle(axis, roV1*150);
-	if (pointW.angleTo(camera.position)+pointW.x/R>1.9 ) return addPoint(i0, i, c);
+	if (pointW.angleTo(camera.position)+pointW.x/R>1.6+Math.random() ) return addPoint(i0, i, c);
 	if (i0 &&  points[i0].distanceTo(point)>R*1.84 ) return addPoint(i0, i, c);
-	if (points.some((v, i)=>(v.up>-1 || flashes[i]>.05) && v.distanceTo(point)<R*(v.pInd==i0?.18:.4))) return addPoint(i0, i, c);
+	if (points.some((v, i)=> v!=targPos && (v.up>-1 || flashes[i]>.05) && v.distanceTo(point)<R*(v.pInd==i0?.18:.4))) return addPoint(i0, i, c);
 	point.pInd=i;
 	points[i]=point;
 	point.isNew=!i0;
@@ -358,7 +360,7 @@ requestAnimationFrame(function animate() {
 	if (points.length && !points[points.length-1]) points.length--;
 	if (newTr) {
 		var p=points[newTr];
-		if (!p.startTr && (p.new || pUp<7 && Math.random()>.4) && !pAdded++) {
+		if (!p.startTr && (p.new || pUp<10 && Math.random()>.7) && !pAdded++) {
 			p.startTr=addPoint(newTr);
 			if (p.startTr && transactions[newTr] && transactions[newTr].timer>1.2) p.up=1;
 		}
