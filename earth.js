@@ -64,7 +64,7 @@ const targE = new Euler().set(0, targUV.x*PI-uShift*PI*2, -targUV.y*PI),
 	targPos=vec3(-R, 0, 0).applyEuler(targE), dir=vec3();
 
 var vVPort=window.visualViewport||{scale: 1}, rect0={};
-function resize(){
+function checkResize(){
 	let rect=canvas.getBoundingClientRect();
 	if (W!=rect.width || H!=rect.height || dpr!=(dpr=devicePixelRatio*vVPort.scale)) {
 		W=rect.width; H=rect.height;
@@ -82,10 +82,8 @@ function resize(){
 		camera.zoom*=W/1.3/r;
 		camera.updateProjectionMatrix();
 	}
-	let {clientWidth:w0, clientHeight:h0}=document.documentElement
-	if (rect.left<0 || rect.top <0 || rect.right>w0 || rect.top>h0) {
-		//render.setScissor
-	}
+	const {left, top, right, bottom} = rect
+	return bottom>0 && top < window.innerHeight
 };
 
 var Emap = (new TextureLoader()).load( imgPath+T_earth, function(t){
@@ -148,7 +146,7 @@ Egeometry.vertices.forEach(v=>{
 Earth.geometry.addAttribute('uv', new Float32BufferAttribute(Egeometry.uv, 2));
 
 var Pmaterial = new PointsMaterial({
-	size: d*.8,
+	size: d*.56,
 	transparent: true,
 	alphaTest: 0.004,
 	depthTest: false,
@@ -161,15 +159,15 @@ var Pmaterial = new PointsMaterial({
 		sh.vertexShader='\
 			attribute float flash;\n\
 			varying float vSize;\n\
-			'			+sh.vertexShader.replace(/}\s*$/, '\
-			  vSize=max(flash, 0.0);\n\
-			  gl_PointSize*=vSize;\n\
-			}			');
+			'			+sh.vertexShader.replace(/}\s*$/, `
+			  vSize=max(flash, 0.0);
+			  gl_PointSize*=vSize;
+			  vSize=1.-vSize;
+				vSize=1.-vSize*abs(vSize);
+			}			`);
 		sh.fragmentShader='\
 			varying float vSize;\n\
 			'			+sh.fragmentShader.replace("#include <map_particle_fragment>", `
-			  float size=1.-vSize;
-				size=1.-size*size;
 				#ifdef T_POINT
 				 vec2 cxy = 2.0 * gl_PointCoord - 1.0;
 			   float r = length(cxy), delta = fwidth(r); 
@@ -180,9 +178,9 @@ var Pmaterial = new PointsMaterial({
 				 #include <map_particle_fragment>
 				 //diffuseColor.rgb =mix(vec3(1.1), diffuse, min(r*2.3, 1.));
 				 //diffuseColor.a=cos(min(r*r,1.)*PI)*.5+.5;
-				 diffuseColor.a *= 3.;
+				 diffuseColor.a *= 2.6;
 				#endif
-			 diffuseColor.a *= smoothstep( ${(R*.2).toFixed(1)},  ${(-R*.4).toFixed(1)}, fogDepth-${(posZ).toFixed(1)} )*size;
+			 diffuseColor.a *= smoothstep( ${(R*.2).toFixed(1)},  ${(-R*.4).toFixed(1)}, fogDepth-${(posZ).toFixed(1)} )*vSize;
 			 #ifndef T_POINT
 			  diffuseColor.a *= diffuseColor.a-.15;
 			 #endif
@@ -192,7 +190,7 @@ var Pmaterial = new PointsMaterial({
 });//, opacity: 0  ///  
 Pmaterial.extensions = {derivatives: 1};
 
-var pCount=50, points = []
+var pCount=50, points = [targPos];
 var flashes=new Float32Array(pCount);
 var points32=new Float32Array(pCount*3);
 var Pgeometry=new BufferGeometry();
@@ -200,6 +198,7 @@ Pgeometry.setAttribute( 'position', new BufferAttribute( points32, 3 ) );
 Pgeometry.setAttribute( 'flash', new BufferAttribute( flashes, 1 ) );
 
 var Flashes=new Points(Pgeometry, Pmaterial);
+//Flashes.renderOrder=1;
 planet.add(Flashes, Earth)
 scene.add(planet);
 planet.position.z=-R
@@ -217,7 +216,7 @@ Tmaterial.color.multiplyScalar(.8);
 
 Pmaterial.color.multiplyScalar(2)
 
-function addTransaction(a,b,i){
+function addTransaction(a,b,i, to){
 	//console.log (pUp, a, b); //return
 	var an=a.angleTo(b), l=R*1.13+an*5.5, center=a.clone().add(b).setLength(l),
 	 ab=b.clone().sub(a).multiplyScalar(.25), cn=center.clone().setLength((l-R)*.7), n;//=an*160+16;
@@ -230,47 +229,53 @@ function addTransaction(a,b,i){
 	//tFlashes.forEach(function(f,i){if (i) tFlashes[i]=tFlashes[i-1]+1/n});
 	var tGeometry=new BufferGeometry().setFromPoints( curve.getSpacedPoints(n) );
 	tGeometry.setAttribute( 'flash', new BufferAttribute( tFlashes, 1 ) );
-	transactions[i]=new Points(tGeometry, Tmaterial);
-	transactions[i].timer=0;
-	transactions[i].n=n;
+	transactions[i]=Object.assign(new Points(tGeometry, Tmaterial), {timer: 0, n, to});
+
 	planet.add(transactions[i]);
 }
 
 function addPoint(i0, i, c=0){ //return
-	if ((c+=1)>1500) return console.log(c);
-	if (i0 && points[i0]==targPos) return;
+	if (c++>1500) return //console.log(c);
+	if (i0 === 0) return;
 	if (i0) delete flTimer[i0];
 	if (!i) {
-		if (!points[0]) i=0
-		else points.every(function(p, j){return points[i=j+1+'']});
+		if (points.length==1) i=1
+		else if (!points.some(function(p, j){return !points[i=j+1] && !transactions[i]})) i=transactions.length;
 		if (i>=pCount && (!i0 || points[i0].isNew)) return false
 	}
-	var fi=Math.random()*1.8, dTest;
 	var point=points0[Math.floor(Math.random()*points0.length)].clone();
 
 	var dis2targ=points[i0]?.distanceTo(targPos);
-	var isTarg = i0 && dis2targ<R*1.5 && dis2targ>R*.25 && Math.random()*dis2targ<R*.4;
-	if (isTarg) point=targPos;
+	var isTarg = i0 && dis2targ<R*1.5 && dis2targ>R*.25 && Math.random()**2*dis2targ<R*.4;
+	if (isTarg) {i=0; point=targPos;}
+	else if (point.distanceTo(targPos)<.25*R) return addPoint(i0, i, c);
 
 	var dLast, pointW=Earth.localToWorld(point.clone()).applyAxisAngle(axis, roV1*150);
-	if (pointW.angleTo(camera.position)+pointW.x/R>1.6+Math.random() ) return addPoint(i0, i, c);
+	if (pointW.angleTo(camera.position)+pointW.x/R>1.7+Math.random() ) return addPoint(i0, i, c);
 	if (i0 &&  points[i0].distanceTo(point)>R*1.84 ) return addPoint(i0, i, c);
 	if (points.some((v, i)=> v!=targPos && (v.up>-1 || flashes[i]>.05) && v.distanceTo(point)<R*(v.pInd==i0?.18:.4))) return addPoint(i0, i, c);
+
+	if (i0) addTransaction(points[i0], point, i0, i)
+
+	if (isTarg) return true;
+
 	point.pInd=i;
 	points[i]=point;
 	point.isNew=!i0;
-	point.up=point.new=+!i0;
+	point.up=+!i0;
 	points32[i*3]=point.x;
 	points32[i*3+1]=point.y;
 	points32[i*3+2]=point.z;
 	Pgeometry.attributes.position.needsUpdate=true;
-	if (i0) addTransaction(points[i0], point, i)
 	// if (i0 && pUp<6 && Math.random()>.65) {  //fork
 	// 	flTimer[i0]=Math.random()<.5?Math.random()*200+230:Math.random()*100;
 	// 	points[i0].up=1
 	// }
 	return true
 }
+points32[0]=targPos.x;
+points32[1]=targPos.y;
+points32[2]=targPos.z;
 
 // interactions
 var dx = 0, dy = 0, ready, pointers={},
@@ -299,7 +304,7 @@ window.addEventListener('pointerdown', e=>{delete pointers.touch;})
 
 requestAnimationFrame(function animate() {
 	requestAnimationFrame(animate);
-	resize();
+	if (!checkResize()) return;
 	var t=performance.now(), dt=t-t0;
 	if (!Emap.image || !tTexture) return;// || dt<dMin
 	dt=Math.min(dt, dMax);
@@ -319,53 +324,62 @@ requestAnimationFrame(function animate() {
 
 	var count=0, newTr, newP, pAdded=0, maxDn=Math.random()*.6;
 	pUp=0;
-	if (!points.length) addPoint();
+	if (points.length==1) addPoint();
 	points.forEach(function(p,i){
-		if ((flTimer[i]-=dt)<0) pAdded=1, addPoint(i+''), p.up=1
+		//if ((flTimer[i]-=dt)<0) pAdded=addPoint(i), p.up=1;
 		count++;
 		if (p.up>0) {
+			pUp++;
 			if ((flashes[i]+=(1.005-flashes[i])*.005*dt) > .95 ) {
 				p.up=-1;
 			}
-			if (!transactions[i] && ++pUp && flashes[i]>.15) newTr=i+'';
+			if (flashes[i]>.8 && !transactions[i] && !pAdded) {
+				pAdded=addPoint(i);
+				//p.up=-1;
+			}
 		}
 		if (p.up<0) {
 			if ((flashes[i]-=(1.11-flashes[i])*flashes[i]*.006*dt) < 0.005) {
 				delete points[i];
+				//if (flashes[i]<maxDn) 
+				newP=1;
 			}
-			if (flashes[i]<maxDn) newP=1;
 		}
-		if (transactions[i]) {
-			var arr=transactions[i].geometry.attributes.flash.array, n=arr.length,
-				t=transactions[i].timer+=dt/Math.pow(transactions[i].n, .3)*.008;//, tt=t*t;
-			arr.forEach(function(v,j){
-				var df=j/n-t, dj=n-j;
-				arr[j]=(df<0) ? 1+df : +(df<.2)*(1-df*df*8);
+		if (!i) flashes[i]+=(.95-flashes[i])*.003*dt
 
-				if (!(dj%6) && dj<31) arr[j]*=Math.pow(1.14, 6-dj/6)
-			});
-			if ( t>1 && arr[n-1]<-0.4 ) {
-				transactions[i].geometry.dispose();
-				planet.remove(transactions[i]);
-				delete transactions[i];
-				if (!p.up) delete points[i]
-			} else {
-				if (t<1 || p.up>0) pUp++;
-				if (t<1.4 && t>.8) newTr=i+'';
-				transactions[i].geometry.attributes.flash.needsUpdate=true
-			}
-			if (!p.up) flashes[i] =t>1? .3+arr[n-1]*.7:Math.smoothstep(t, .6, .95);
-		}
 	})
-	if (points.length && !points[points.length-1]) points.length--;
+	transactions.forEach((tr, i) => {
+		var arr=tr.geometry.attributes.flash.array, n=arr.length,
+			t=tr.timer+=dt/Math.pow(tr.n, .3)*.008, {to}=tr;//, tt=t*t;
+		arr.forEach(function(v,j){
+			var df=j/n-t, dj=n-j;
+			arr[j]=(df<0) ? 1+df : +(df<.2)*(1-df*df*8);
+
+			if (!(dj%6) && dj<31) arr[j]*=Math.pow(1.14, 6-dj/6)
+		});
+		if ( t>1 && arr[n-1]<-0.4 ) {
+			tr.geometry.dispose();
+			planet.remove(tr);
+			delete transactions[i];
+			if (to) delete points[to];
+		} else {
+			if (t<1) pUp++;
+			if (t>.8 && !transactions[to]) newTr=to;
+			tr.geometry.attributes.flash.needsUpdate=true
+		}
+		var flUp = Math.smoothstep(t, .6, .95);
+		if (!to && t<1) flashes[0] = Math.max(flashes[0], .95+flUp*.4);
+		else if (to && !points[to]?.up) flashes[to] =t>1? .3+arr[n-1]*.7:flUp;
+	})
+	if (!points[points.length-1]) points.length--;
 	if (newTr) {
 		var p=points[newTr];
-		if (!p.startTr && (p.new || pUp<10 && Math.random()>.7) && !pAdded++) {
-			p.startTr=addPoint(newTr);
-			if (p.startTr && transactions[newTr] && transactions[newTr].timer>1.2) p.up=1;
+		if (!p.startTr && pUp<pCount && !pAdded) {
+			pAdded = p.startTr=addPoint(newTr);
+			//if (p.startTr && transactions[newTr] && transactions[newTr].timer>1.2) p.up=1;
 		}
 	}
-	if (newP && pUp<2 && Math.random()<.2 && !pAdded++) addPoint();
+	if (pUp<3 && Math.random()<.2 && !pAdded) pAdded=addPoint();
 	Pgeometry.attributes.flash.needsUpdate=true;
 	// point.lookAt(lookAt);
 	// tEarth.rotation.set(0,0,0);
@@ -395,7 +409,7 @@ document.fonts.load('bold 50px "Futura LT"').then(function(){
 	ctx.font=fnt;
 	// ctx.fillStyle = "#000";
 	// ctx.fillRect(0, 0, canvas.width, canvas.height);
-	ctx.fillStyle = "#fff";
+	ctx.fillStyle = "#00a1e5";
 	ctx.fillText(text, 1.5, asc+1.5);
 
 	tTexture=new Texture(tCanvas);
